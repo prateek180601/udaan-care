@@ -5,185 +5,202 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Udaan Care | Autism & Child Development Clinic</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
-:root {
-  --primary: #2E86C1;
-  --secondary: #6C5CE7;
-  --accent: #00B894;
-  --light: #F7FAFC;
-  --dark: #1E293B;
+:root{
+  --primary:#2D6CDF;
+  --dark:#1A1A1A;
+  --light:#F4F8FB;
+  --gray:#6B7280;
 }
 
-* {
-  box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: var(--light);
-  color: var(--dark);
-  line-height: 1.6;
+body{
+  font-family:'Inter',sans-serif;
+  color:var(--dark);
+  background:#FFFFFF;
+  line-height:1.6;
 }
 
 /* HEADER */
 
-header {
-  background: white;
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+header{
+  background:#FFFFFF;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
+.logo{
+  display:flex;
+  align-items:center;
 }
 
-.logo img {
-  height: 50px;
-  margin-right: 10px;
+.logo img{
+  height:45px;
+  margin-right:10px;
 }
 
-.logo span {
-  font-weight: 700;
-  font-size: 20px;
-  color: var(--primary);
+.logo span{
+  font-weight:700;
+  font-size:18px;
+  color:var(--primary);
 }
 
-nav a {
-  text-decoration: none;
-  margin-left: 25px;
-  color: var(--dark);
-  font-weight: 500;
+nav a{
+  text-decoration:none;
+  margin-left:25px;
+  color:var(--dark);
+  font-weight:500;
+  font-size:14px;
 }
 
-nav a:hover {
-  color: var(--primary);
+nav a:hover{
+  color:var(--primary);
 }
 
 /* HERO */
 
-.hero {
-  padding: 100px 20px;
-  text-align: center;
-  background: linear-gradient(135deg, #2E86C1, #6C5CE7);
-  color: white;
+.hero{
+  background:var(--light);
+  padding:100px 20px;
+  text-align:center;
 }
 
-.hero h1 {
-  font-size: 40px;
-  margin-bottom: 15px;
+.hero h1{
+  font-size:38px;
+  margin-bottom:15px;
 }
 
-.hero p {
-  font-size: 18px;
-  margin-bottom: 30px;
+.hero p{
+  font-size:17px;
+  color:var(--gray);
+  margin-bottom:30px;
 }
 
-.button {
-  padding: 12px 25px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  margin: 5px;
+.btn{
+  padding:12px 25px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+  margin:5px;
 }
 
-.primary-btn {
-  background: white;
-  color: var(--primary);
+.primary-btn{
+  background:var(--primary);
+  color:#fff;
 }
 
-.secondary-btn {
-  background: var(--accent);
-  color: white;
+.secondary-btn{
+  background:#fff;
+  border:1px solid var(--primary);
+  color:var(--primary);
+}
+
+/* TRUST STRIP */
+
+.trust{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  font-size:13px;
+  color:var(--gray);
+  padding:20px;
 }
 
 /* SECTIONS */
 
-section {
-  padding: 70px 20px;
-  max-width: 1100px;
-  margin: auto;
+section{
+  padding:70px 20px;
+  max-width:1100px;
+  margin:auto;
 }
 
-h2 {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 40px;
+h2{
+  text-align:center;
+  font-size:26px;
+  margin-bottom:40px;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
 }
 
-.card {
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+.card{
+  background:#fff;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
-.card h4 {
-  margin-top: 0;
-  color: var(--primary);
+.card h4{
+  margin-bottom:10px;
+  color:var(--primary);
 }
 
 /* CONTACT */
 
-.contact-box {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-  text-align: center;
+.contact-box{
+  background:#fff;
+  padding:30px;
+  border-radius:10px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+  text-align:center;
+  font-size:14px;
+  color:var(--gray);
 }
 
 /* FOOTER */
 
-footer {
-  text-align: center;
-  padding: 40px;
-  background: white;
-  margin-top: 50px;
+footer{
+  text-align:center;
+  padding:40px;
+  background:#0F172A;
+  color:#fff;
+  margin-top:50px;
+  font-size:13px;
 }
 
 /* WHATSAPP */
 
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-size: 14px;
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:12px 18px;
+  border-radius:50px;
+  text-decoration:none;
+  font-size:14px;
 }
 
 /* MOBILE */
 
-@media (max-width:768px) {
-  header {
-    flex-direction: column;
+@media(max-width:768px){
+  header{
+    flex-direction:column;
   }
-  nav {
-    margin-top: 10px;
+  nav{
+    margin-top:10px;
   }
-  nav a {
-    margin-left: 10px;
+  nav a{
+    margin-left:15px;
   }
 }
 
@@ -205,10 +222,16 @@ footer {
 </header>
 
 <div class="hero">
-  <h1>Small Steps. Strong Wings.</h1>
-  <p>Early Intervention & Developmental Therapy for Children</p>
-  <a href="#contact"><button class="button primary-btn">Book Appointment</button></a>
-  <a href="#contact"><button class="button secondary-btn">Online Consultation</button></a>
+  <h1>Early Intervention & Developmental Therapy</h1>
+  <p>Compassionate, evidence-based care for children with developmental challenges.</p>
+  <a href="#contact"><button class="btn primary-btn">Book Appointment</button></a>
+  <a href="#contact"><button class="btn secondary-btn">Online Consultation</button></a>
+</div>
+
+<div class="trust">
+  <div>✔ Licensed Professionals</div>
+  <div>✔ Evidence-Based Therapy</div>
+  <div>✔ Secure Consultations</div>
 </div>
 
 <section id="services">
@@ -216,15 +239,15 @@ footer {
   <div class="cards">
     <div class="card">
       <h4>Autism Assessment</h4>
-      <p>Comprehensive developmental screening and evaluation for early diagnosis.</p>
+      <p>Comprehensive screening and early diagnosis programs.</p>
     </div>
     <div class="card">
       <h4>Occupational Therapy</h4>
-      <p>Structured therapy to improve focus, independence and motor skills.</p>
+      <p>Structured therapy to enhance focus, independence and motor skills.</p>
     </div>
     <div class="card">
       <h4>Sensory Integration Therapy</h4>
-      <p>Helping children respond effectively to sensory challenges.</p>
+      <p>Helping children respond effectively to sensory environments.</p>
     </div>
   </div>
 </section>
@@ -235,7 +258,6 @@ footer {
     <h4>Dr. Prasoon Gupta</h4>
     <p>BOT, MOT – Occupational Therapist</p>
     <p>Pediatric | Neuro | Sensory Integration Specialist</p>
-    <p>Focused on early intervention and structured developmental therapy programs for children.</p>
   </div>
 </section>
 
