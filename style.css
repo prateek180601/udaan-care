@@ -1,15 +1,27 @@
-:root {
-    --primary: #5A9BD5;
-    --secondary: #A65AD5;
-    --accent: #F47C4D;
-    --teal: #1CA7C6;
-    --light-bg: #f9f9fb;
-    --dark-text: #333;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: white;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--light-bg);
+nav .logo {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--primary);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
     color: var(--dark-text);
 }
