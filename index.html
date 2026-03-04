@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Udaan Care | Autism & Child Development Clinic</title>
+
+<style>
+:root {
+  --primary: #5B9BD5;
+  --secondary: #A65AD8;
+  --teal: #1FA7C9;
+  --orange: #F47C5C;
+  --light-bg: #F4F8FB;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--light-bg);
+  color: #333;
+}
+
+header {
+  background: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: white;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero h3 {
+  color: var(--secondary);
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 15px;
+}
+
+.primary {
+  background: var(--primary);
+  color: white;
+}
+
+.secondary {
+  background: var(--secondary);
+  color: white;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+footer {
+  background: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+@media(max-width:768px){
+  .hero h1{font-size:28px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Udaan Care</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Doctor</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Small Steps. Strong Wings.</h1>
+  <h3>Early Intervention & Developmental Therapy for Children</h3>
+  <p>Autism Assessment | Occupational Therapy | Sensory Integration | Online Consultations</p>
+  <button class="btn primary">Book Appointment</button>
+  <button class="btn secondary">Online Consultation</button>
+</section>
+
+<section>
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">
+      <h4>Autism Screening & Assessment</h4>
+      <p>Early identification and detailed developmental evaluation for children.</p>
+    </div>
+    <div class="card">
+      <h4>Occupational Therapy</h4>
+      <p>Improving daily skills, focus, sensory processing and independence.</p>
+    </div>
+    <div class="card">
+      <h4>Sensory Integration Therapy</h4>
+      <p>Helping children respond better to sensory challenges.</p>
+    </div>
+    <div class="card">
+      <h4>Online Parent Consultation</h4>
+      <p>Expert guidance and Zoom therapy sessions for parents.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>About Dr. Prasoon Gupta</h2>
+  <div class="card">
+    <p><strong>BOT, MOT – Occupational Therapist</strong></p>
+    <p>Pediatric | Neuro | Sensory Integration Specialist</p>
+    <p>Dr. Prasoon Gupta specializes in early intervention, autism therapy and developmental support. His compassionate and structured approach focuses on building independence, confidence and skill development in children.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Contact Us</h2>
+  <div class="card">
+    <p><strong>Udaan Care</strong></p>
+    <p>Over Bridge Road, Garg Chowraha Pathak Gali<br>
+    Near Rama Pharma, Sai Kripa First Floor<br>
+    Katni (M.P.) – 483501</p>
+    <p>📞 +91 8349764084</p>
+    <p>📧 care@udaan.in</p>
+    <p>Mon – Sat | 10:00 AM – 7:00 PM</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Udaan Care | All Rights Reserved
+</footer>
+
+<a class="whatsapp" href="https://wa.me/918349764084" target="_blank">Chat on WhatsApp</a>
+
+</body>
+</html>
