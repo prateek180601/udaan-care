@@ -9,15 +9,17 @@
 :root {
   --primary: #5B9BD5;
   --secondary: #A65AD8;
-  --teal: #1FA7C9;
-  --orange: #F47C5C;
-  --light-bg: #F4F8FB;
+  --light: #F4F8FB;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: var(--light-bg);
+  background: var(--light);
   color: #333;
 }
 
@@ -27,13 +29,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: var(--primary);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 nav a {
@@ -43,10 +42,18 @@ nav a {
   font-weight: 500;
 }
 
+nav a:hover {
+  color: var(--primary);
+}
+
 .hero {
+  padding: 140px 20px 100px;
   text-align: center;
-  padding: 80px 20px;
-  background: white;
+  background: linear-gradient(rgba(91,155,213,0.8), rgba(166,90,216,0.8)),
+  url('https://images.unsplash.com/photo-1588776814546-b8c1b6d3a3f1');
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 
 .hero h1 {
@@ -54,28 +61,18 @@ nav a {
   margin-bottom: 10px;
 }
 
-.hero h3 {
-  color: var(--secondary);
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-bottom: 25px;
-}
-
 .btn {
-  padding: 12px 22px;
-  border-radius: 6px;
+  padding: 12px 25px;
   border: none;
+  border-radius: 6px;
   cursor: pointer;
   margin: 5px;
   font-size: 15px;
 }
 
 .primary {
-  background: var(--primary);
-  color: white;
+  background: white;
+  color: var(--primary);
 }
 
 .secondary {
@@ -84,7 +81,7 @@ nav a {
 }
 
 section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   max-width: 1100px;
   margin: auto;
 }
@@ -103,14 +100,19 @@ h2 {
 .card {
   background: white;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-footer {
-  background: white;
-  padding: 30px;
-  text-align: center;
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .whatsapp {
@@ -122,11 +124,12 @@ footer {
   padding: 12px 18px;
   border-radius: 50px;
   text-decoration: none;
-  font-size: 14px;
 }
 
-@media(max-width:768px){
-  .hero h1{font-size:28px;}
+footer {
+  text-align: center;
+  padding: 40px;
+  background: white;
 }
 </style>
 </head>
@@ -134,64 +137,54 @@ footer {
 <body>
 
 <header>
-  <div class="logo">Udaan Care</div>
+  <h3>Udaan Care</h3>
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Services</a>
-    <a href="#">Doctor</a>
-    <a href="#">Contact</a>
+    <a href="#services">Services</a>
+    <a href="#doctor">Doctor</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<section class="hero">
+<div class="hero">
   <h1>Small Steps. Strong Wings.</h1>
-  <h3>Early Intervention & Developmental Therapy for Children</h3>
-  <p>Autism Assessment | Occupational Therapy | Sensory Integration | Online Consultations</p>
+  <p>Early Intervention & Developmental Therapy for Children</p>
   <button class="btn primary">Book Appointment</button>
   <button class="btn secondary">Online Consultation</button>
-</section>
+</div>
 
-<section>
+<section id="services" class="fade">
   <h2>Our Services</h2>
   <div class="cards">
     <div class="card">
-      <h4>Autism Screening & Assessment</h4>
-      <p>Early identification and detailed developmental evaluation for children.</p>
+      <h4>Autism Assessment</h4>
+      <p>Early screening and developmental evaluation.</p>
     </div>
     <div class="card">
       <h4>Occupational Therapy</h4>
-      <p>Improving daily skills, focus, sensory processing and independence.</p>
+      <p>Improving focus, sensory processing and independence.</p>
     </div>
     <div class="card">
       <h4>Sensory Integration Therapy</h4>
       <p>Helping children respond better to sensory challenges.</p>
     </div>
-    <div class="card">
-      <h4>Online Parent Consultation</h4>
-      <p>Expert guidance and Zoom therapy sessions for parents.</p>
-    </div>
   </div>
 </section>
 
-<section>
-  <h2>About Dr. Prasoon Gupta</h2>
+<section id="doctor" class="fade">
+  <h2>Dr. Prasoon Gupta</h2>
   <div class="card">
     <p><strong>BOT, MOT – Occupational Therapist</strong></p>
     <p>Pediatric | Neuro | Sensory Integration Specialist</p>
-    <p>Dr. Prasoon Gupta specializes in early intervention, autism therapy and developmental support. His compassionate and structured approach focuses on building independence, confidence and skill development in children.</p>
+    <p>Compassionate therapy focused on early intervention and structured developmental growth.</p>
   </div>
 </section>
 
-<section>
+<section id="contact" class="fade">
   <h2>Contact Us</h2>
   <div class="card">
-    <p><strong>Udaan Care</strong></p>
-    <p>Over Bridge Road, Garg Chowraha Pathak Gali<br>
-    Near Rama Pharma, Sai Kripa First Floor<br>
-    Katni (M.P.) – 483501</p>
+    <p>📍 Katni (M.P.) – 483501</p>
     <p>📞 +91 8349764084</p>
     <p>📧 care@udaan.in</p>
-    <p>Mon – Sat | 10:00 AM – 7:00 PM</p>
   </div>
 </section>
 
@@ -199,7 +192,25 @@ footer {
   © 2026 Udaan Care | All Rights Reserved
 </footer>
 
-<a class="whatsapp" href="https://wa.me/918349764084" target="_blank">Chat on WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/918349764084" target="_blank">
+Chat on WhatsApp
+</a>
+
+<script>
+const faders = document.querySelectorAll('.fade');
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("show");
+    observer.unobserve(entry.target);
+  });
+}, { threshold: 0.2 });
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+</script>
 
 </body>
 </html>
