@@ -67,3 +67,16 @@ nav ul li a {
     text-decoration: none;
     border-radius: 5px;
 }
+.booking-form {
+    width: 50%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form button {
+    padding: 12px;
+}
