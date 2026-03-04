@@ -1,1 +1,15 @@
-<link rel="stylesheet" href="style.css">
+:root {
+    --primary: #5A9BD5;
+    --secondary: #A65AD5;
+    --accent: #F47C4D;
+    --teal: #1CA7C6;
+    --light-bg: #f9f9fb;
+    --dark-text: #333;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+}
