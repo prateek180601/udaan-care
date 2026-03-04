@@ -6,130 +6,119 @@
 <title>Udaan Care | Autism & Child Development Clinic</title>
 
 <style>
-:root {
-  --primary: #5B9BD5;
-  --secondary: #A65AD8;
-  --light: #F4F8FB;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: var(--light);
+  background-color: #f4f8fb;
   color: #333;
 }
 
+/* HEADER */
 header {
   background: white;
-  padding: 15px 40px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+}
+
+.logo-box img {
+  height: 45px;
+  margin-right: 10px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 nav a {
-  margin-left: 20px;
+  margin-left: 15px;
   text-decoration: none;
   color: #333;
   font-weight: 500;
 }
 
 nav a:hover {
-  color: var(--primary);
+  color: #5B9BD5;
 }
 
+/* HERO */
 .hero {
-  padding: 140px 20px 100px;
   text-align: center;
-  background: linear-gradient(rgba(91,155,213,0.8), rgba(166,90,216,0.8)),
-  url('https://images.unsplash.com/photo-1588776814546-b8c1b6d3a3f1');
-  background-size: cover;
-  background-position: center;
-  color: white;
+  padding: 60px 20px;
+  background: white;
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 32px;
   margin-bottom: 10px;
 }
 
-.btn {
-  padding: 12px 25px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  margin: 5px;
-  font-size: 15px;
+.hero p {
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
-.primary {
-  background: white;
-  color: var(--primary);
-}
-
-.secondary {
-  background: var(--secondary);
+.button {
+  padding: 10px 20px;
+  background: #5B9BD5;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
+.button:hover {
+  background: #4a8ac7;
+}
+
+/* SECTIONS */
 section {
-  padding: 80px 20px;
-  max-width: 1100px;
+  padding: 40px 20px;
+  max-width: 1000px;
   margin: auto;
 }
 
 h2 {
   text-align: center;
-  margin-bottom: 30px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  margin-bottom: 20px;
 }
 
 .card {
   background: white;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.fade {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: white;
+  margin-top: 30px;
 }
 
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+/* WHATSAPP */
 .whatsapp {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #25D366;
   color: white;
-  padding: 12px 18px;
-  border-radius: 50px;
+  padding: 10px 15px;
+  border-radius: 30px;
   text-decoration: none;
-}
-
-footer {
-  text-align: center;
-  padding: 40px;
-  background: white;
+  font-size: 14px;
 }
 </style>
 </head>
@@ -137,7 +126,11 @@ footer {
 <body>
 
 <header>
-  <h3>Udaan Care</h3>
+  <div class="logo-box">
+    <img src="logo.png" alt="Udaan Care Logo">
+    <strong>Udaan Care</strong>
+  </div>
+
   <nav>
     <a href="#services">Services</a>
     <a href="#doctor">Doctor</a>
@@ -148,43 +141,49 @@ footer {
 <div class="hero">
   <h1>Small Steps. Strong Wings.</h1>
   <p>Early Intervention & Developmental Therapy for Children</p>
-  <button class="btn primary">Book Appointment</button>
-  <button class="btn secondary">Online Consultation</button>
+  <button class="button">Book Appointment</button>
 </div>
 
-<section id="services" class="fade">
+<section id="services">
   <h2>Our Services</h2>
-  <div class="cards">
-    <div class="card">
-      <h4>Autism Assessment</h4>
-      <p>Early screening and developmental evaluation.</p>
-    </div>
-    <div class="card">
-      <h4>Occupational Therapy</h4>
-      <p>Improving focus, sensory processing and independence.</p>
-    </div>
-    <div class="card">
-      <h4>Sensory Integration Therapy</h4>
-      <p>Helping children respond better to sensory challenges.</p>
-    </div>
+
+  <div class="card">
+    <strong>Autism Screening & Assessment</strong>
+    <p>Early identification and developmental evaluation.</p>
+  </div>
+
+  <div class="card">
+    <strong>Occupational Therapy</strong>
+    <p>Improving focus, sensory response and daily independence.</p>
+  </div>
+
+  <div class="card">
+    <strong>Sensory Integration Therapy</strong>
+    <p>Helping children manage sensory challenges effectively.</p>
   </div>
 </section>
 
-<section id="doctor" class="fade">
+<section id="doctor">
   <h2>Dr. Prasoon Gupta</h2>
+
   <div class="card">
     <p><strong>BOT, MOT – Occupational Therapist</strong></p>
     <p>Pediatric | Neuro | Sensory Integration Specialist</p>
-    <p>Compassionate therapy focused on early intervention and structured developmental growth.</p>
+    <p>Focused on structured early intervention and child development therapy.</p>
   </div>
 </section>
 
-<section id="contact" class="fade">
+<section id="contact">
   <h2>Contact Us</h2>
+
   <div class="card">
-    <p>📍 Katni (M.P.) – 483501</p>
-    <p>📞 +91 8349764084</p>
-    <p>📧 care@udaan.in</p>
+    <p><strong>Udaan Care</strong></p>
+    <p>Over Bridge Road, Garg Chowraha Pathak Gali</p>
+    <p>Near Rama Pharma, Sai Kripa First Floor</p>
+    <p>Katni (M.P.) – 483501</p>
+    <p>Phone: +91 8349764084</p>
+    <p>Email: care@udaan.in</p>
+    <p>Timings: Mon – Sat | 10:00 AM – 7:00 PM</p>
   </div>
 </section>
 
@@ -195,22 +194,6 @@ footer {
 <a class="whatsapp" href="https://wa.me/918349764084" target="_blank">
 Chat on WhatsApp
 </a>
-
-<script>
-const faders = document.querySelectorAll('.fade');
-
-const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add("show");
-    observer.unobserve(entry.target);
-  });
-}, { threshold: 0.2 });
-
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-});
-</script>
 
 </body>
 </html>
